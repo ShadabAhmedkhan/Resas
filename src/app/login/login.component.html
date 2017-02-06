@@ -1,0 +1,66 @@
+<!--<div class="form-container">-->
+<!--<md-grid-list cols="2">-->
+  <!--<md-grid-tile>-->
+    <!--<span class="error" *ngIf="error">{{ error }}</span>-->
+<!--<md-card>-->
+  <!--<md-card-title>-->
+    <!--login-->
+  <!--</md-card-title>-->
+  <!--<md-list>-->
+    <!--<md-list-item>-->
+  <!--<button md-button (click)="loginFb()">Login With Facebook</button>-->
+      <!--</md-list-item>-->
+    <!--<md-list-item>-->
+  <!--<button md-button (click)="loginGoogle()">login With Google</button>-->
+      <!--</md-list-item>-->
+        <!--<md-list-item>-->
+  <!--<button md-button>Email</button>-->
+          <!--</md-list-item>-->
+        <!--<md-list-item>-->
+
+  <!--<a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>-->
+            <!--</md-list-item>-->
+  <!--</md-list>-->
+<!--</md-card>-->
+    <!--</md-grid-tile>-->
+
+  <!--</md-grid-list>-->
+<!--</div>-->
+
+
+
+<md-grid-list cols="3">
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1"  style="height: 150px">
+
+    <span class="error" *ngIf="error">{{ error }}</span>
+
+      <md-card class="example-card">
+        <md-card-header>
+          <md-card-title><h2>Login</h2></md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+            <span class="example-spacer"></span>
+            <button md-button md-raised-button color="primary" (click)="loginFb()" type="submit">Login With Facebook</button>
+          </md-card-actions>
+          <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+            <span class="example-spacer"></span>
+            <button md-button md-raised-button color="primary" (click)="loginGoogle()" type="submit">login With Google</button>
+          </md-card-actions>
+          <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+          <span class="example-spacer"></span>
+          <button md-button md-raised-button color="primary" routerLink="/login-email" type="submit">Email</button>
+        </md-card-actions>
+          <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+            <span class="example-spacer"></span>
+            <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+          </md-card-actions>
+        </md-card-content>
+      </md-card>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+
+</md-grid-list>

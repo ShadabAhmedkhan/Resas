@@ -1,0 +1,53 @@
+<!--<md-sidenav-container class="example-container">-->
+  <!--<md-sidenav #sidenav class="example-sidenav">-->
+    <!--Jolly good!-->
+  <!--</md-sidenav>-->
+
+  <!--<div class="example-sidenav-content">-->
+    <!--<md-card>Simple card</md-card>-->
+    <!--<button md-button (click)="sidenav.open()">-->
+      <!--Open sidenav-->
+    <!--</button>-->
+  <!--</div>-->
+
+<md-grid-list cols="3">
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1"  style="height: 150px">
+  <div class="example-sidenav-content">
+  <md-card>
+    <md-card-title>
+      <i class="material-icons md-48">face</i>
+    Profile
+    </md-card-title>
+
+
+    <md-card-content >
+      <md-input-container>
+        <input md-input placeholder="First Name" value="">
+      </md-input-container>
+      <md-input-container>
+        <input md-input placeholder="Last Name" value="">
+      </md-input-container>
+      <md-select placeholder="">
+        <md-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </md-option>
+      </md-select>
+      <md-input-container>
+      <input md-input placeholder="Company Name" value="">
+    </md-input-container><md-input-container>
+      <input md-input placeholder="Contact" value="">
+    </md-input-container>
+      <button md-button>Submit</button>
+    </md-card-content>
+
+  </md-card>
+  </div>
+<!--</md-sidenav-container>-->
+
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+
+</md-grid-list>

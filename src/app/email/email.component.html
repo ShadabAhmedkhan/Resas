@@ -1,0 +1,40 @@
+
+
+<md-grid-list cols="3">
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1"  style="height: 150px">
+
+    <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+    <md-card class="example-card">
+      <md-card-header>
+        <md-card-title><h2>Login</h2></md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+          <md-input-container>
+          <span class="example-spacer"></span>
+          <input md-input placeholder="Email" type="email" (ngModel)="email" name="email" >
+            </md-input-container>
+        </md-card-actions>
+        <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+          <md-input-container>
+          <span class="example-spacer"></span>
+          <input md-input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+            </md-input-container>
+        </md-card-actions>
+        <md-card-actions class="text-right padding-right-20 padding-bottom-10">
+          <span class="example-spacer"></span>
+          <button md-button md-raised-button color="primary">Log in</button>
+        </md-card-actions>
+
+      </md-card-content>
+    </md-card>
+    </form>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1" [rowspan]="1">
+  </md-grid-tile>
+
+</md-grid-list>
