@@ -14,6 +14,7 @@ import { MembersComponent } from './members/members.component';
 import { AuthGuard } from './auth.service';
 import { routes } from './app.routes';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { OthersComponent } from './members/others/others.component';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDb2lBaim48zI1V7-ohlylUtSkEK94Z_OA',
   authDomain: 'https://resas-e4743.firebaseio.com',
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     EmailComponent,
     SignupComponent,
     MembersComponent,
-    MainpageComponent
+    MainpageComponent,
+    OthersComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@
     <!--</button>-->
   <!--</div>-->
 
-<md-grid-list cols="3">
+<md-grid-list cols="3" >
   <md-grid-tile [colspan]="1" [rowspan]="1">
   </md-grid-tile>
   <md-grid-tile [colspan]="1" [rowspan]="1"  style="height: 150px">
@@ -21,27 +21,29 @@
     Profile
     </md-card-title>
 
-
+    <!--<form [formGroup]="myForm" (ngSubmit)="onSignup()">-->
     <md-card-content >
+<form>
       <md-input-container>
         <input md-input placeholder="First Name" value="">
       </md-input-container>
       <md-input-container>
         <input md-input placeholder="Last Name" value="">
       </md-input-container>
-      <md-select placeholder="">
-        <md-option *ngFor="let food of foods" [value]="food.value">
-          {{ food.viewValue }}
+      <md-select placeholder="Select company" [(ngModel)]="selectedValue" name="food">
+        <md-option *ngFor="let food of foods" [value]="food.value"  >
+          {{ food.viewValue  }}
         </md-option>
       </md-select>
-      <md-input-container>
-      <input md-input placeholder="Company Name" value="">
-    </md-input-container><md-input-container>
-      <input md-input placeholder="Contact" value="">
-    </md-input-container>
-      <button md-button>Submit</button>
-    </md-card-content>
+  <!--<p>  {{selectedValue}} </p>-->
 
+  <md-input-container>
+      <input md-input placeholder="Company Name" value="">
+    </md-input-container>
+      <button md-button style="align-items: center">Submit</button>
+</form>
+    </md-card-content>
+    <!--</form>-->
   </md-card>
   </div>
 <!--</md-sidenav-container>-->

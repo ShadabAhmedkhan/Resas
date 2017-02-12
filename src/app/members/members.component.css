@@ -1,0 +1,13 @@
+input{
+  width: 250px;
+}
+md-select{
+  width: 250px;
+  padding-top: 10px;
+}
+button{
+  margin-left: 100px;
+}
+md-card-title{
+  padding-left: 80px;
+}

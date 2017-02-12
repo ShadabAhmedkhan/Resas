@@ -10,6 +10,7 @@ body{
   margin: 0;
   background-image: url("https://images7.alphacoders.com/686/686386.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 .error {
   background:#f1f0ef;
@@ -36,10 +37,10 @@ body{
 .example-sidenav-content {
   display: flex;
   height: 100%;
-  width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: 5%;
+
 }
 
 .example-sidenav {
