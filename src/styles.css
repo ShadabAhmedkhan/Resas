@@ -6,12 +6,12 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
-body{
+/*body{
   margin: 0;
   background-image: url("https://images7.alphacoders.com/686/686386.jpg");
   background-size: cover;
   background-attachment: fixed;
-}
+}*/
 .error {
   background:#f1f0ef;
   padding:1em;

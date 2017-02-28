@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
@@ -15,6 +15,7 @@ import { AuthGuard } from './auth.service';
 import { routes } from './app.routes';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { OthersComponent } from './members/others/others.component';
+import { SampleComponent } from './sample/sample.component';
 export const firebaseConfig = {
   apiKey: 'AIzaSyDb2lBaim48zI1V7-ohlylUtSkEK94Z_OA',
   authDomain: 'https://resas-e4743.firebaseio.com',
@@ -30,11 +31,13 @@ export const firebaseConfig = {
     SignupComponent,
     MembersComponent,
     MainpageComponent,
-    OthersComponent
+    OthersComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     MaterialModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),

@@ -23,25 +23,34 @@
 
     <!--<form [formGroup]="myForm" (ngSubmit)="onSignup()">-->
     <md-card-content >
-<form>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myform.value)">
       <md-input-container>
-        <input md-input placeholder="First Name" value="">
+        <input md-input placeholder="First Name" [formControl]="myForm.controls['FirstName']">
+                  <md-hint *ngIf="myForm.controls['FirstName'].touched && myForm.controls['FirstName'].hasError('required')" [ngStyle]="{'color': 'red'}" align="start">Required</md-hint>
+
       </md-input-container>
       <md-input-container>
-        <input md-input placeholder="Last Name" value="">
+        <input md-input placeholder="Last Name" [formControl]="myForm.controls['LastName']">
+                 <md-hint *ngIf="myForm.controls['LastName'].touched && myForm.controls['LastName'].hasError('required')" [ngStyle]="{'color': 'red'}" align="start">Required</md-hint>
+
       </md-input-container>
-      <md-select placeholder="Select company" [(ngModel)]="selectedValue" name="food">
-        <md-option *ngFor="let food of foods" [value]="food.value"  >
-          {{ food.viewValue  }}
-        </md-option>
-      </md-select>
+      <md-select placeholder="Account Type" name="accountType" class="example-full-width" [formControl]="myForm.controls['AccountType']">
+            <md-option value="IT" selected>IT</md-option>
+            <md-option value="Travel" selected>Travel</md-option>
+           <md-option value="others" selected>others</md-option>
+
+            <md-hint *ngIf="myForm.controls['AccountType'].touched && myForm.controls['AccountType'].hasError('required')" [ngStyle]="{'color': 'red'}" align="start">Required</md-hint>
+          </md-select>
   <!--<p>  {{selectedValue}} </p>-->
 
   <md-input-container>
-      <input md-input placeholder="Company Name" value="">
+      <input md-input placeholder="Company Name" [formControl]="myForm.controls['cName']">
+                <md-hint *ngIf="myForm.controls['cName'].touched && myForm.controls['cName'].hasError('required')" [ngStyle]="{'color': 'red'}" align="start">Required</md-hint>
+
     </md-input-container>
-      <button md-button style="align-items: center">Submit</button>
+      <button md-button style="align-items: center" *ngIf="onSubmit()">Submit</button>
 </form>
+
     </md-card-content>
     <!--</form>-->
   </md-card>
